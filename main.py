@@ -4,17 +4,18 @@ import json
 pygame.init()
 surface = pygame.display.set_mode((500, 625),pygame.RESIZABLE)
 
-color_list = []
-
-f = open('colors.json')
-data = json.load(f)
-
-for i in data['colors']:
-    print(i['color'])
-    color_list.append(i['color'])   
-
 running =  True
 while running:
+    color_list = []
+
+    f = open('colors.json')
+    data = json.load(f)
+
+    for i in data['colors']:
+        print(i['color'])
+        color_list.append(i['color'])
+
+    f.close()
 
     x,y = surface.get_size()
 

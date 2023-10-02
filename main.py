@@ -6,6 +6,7 @@ surface = pygame.display.set_mode((500, 625),pygame.RESIZABLE)
 
 running =  True
 while running:
+
     color_list = []
 
     f = open('colors.json')
